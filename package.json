@@ -1,0 +1,9 @@
+{
+  "name": "min-vue",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^5.2.11"
+  }
+}
