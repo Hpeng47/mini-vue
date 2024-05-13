@@ -1,7 +1,7 @@
 /*
  * @Date: 2024-05-03 21:23:57
  * @LastEditors: hhp && 775621376@qq.com
- * @LastEditTime: 2024-05-07 00:10:00
+ * @LastEditTime: 2024-05-13 22:49:36
  * @FilePath: \min-vue\main.ts
  * @Description:ts入口文件
  * @Author: hehaipeng
@@ -20,13 +20,25 @@ const obj = ref("1");
 effect(() => {
   const vnode1: Vnode = {
     tag: "div",
-    children: "321",
+    key: 1,
+    children: [
+      { tag: "div", key: 1, children: "123" },
+      { tag: "div", key: 2, children: "123" },
+      { tag: "div", key: 3, children: "123" },
+      { tag: "div", key: 4, children: "123" },
+      { tag: "div", key: 5, children: "123" },
+      { tag: "div", key: 6, children: "123" },
+      { tag: "div", key: 7, children: "123" },
+    ],
   };
   const vnode2: Vnode = {
     tag: "div",
+    key: 1,
     children: [
-      { tag: "div", children: "123" },
-      { tag: "div", children: "123" },
+      { tag: "div", key: 1, children: "12" },
+      { tag: "div", key: 2, children: "12" },
+      { tag: "div", key: 3, children: "13" },
+      { tag: "div", key: 4, children: "13" },
     ],
   };
   createApp(vnode1).mount(app);
