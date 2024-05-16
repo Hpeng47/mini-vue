@@ -1,7 +1,7 @@
 /*
  * @Date: 2024-05-03 21:23:57
  * @LastEditors: hhp && 775621376@qq.com
- * @LastEditTime: 2024-05-13 22:49:36
+ * @LastEditTime: 2024-05-16 22:37:27
  * @FilePath: \min-vue\main.ts
  * @Description:ts入口文件
  * @Author: hehaipeng
@@ -20,25 +20,25 @@ const obj = ref("1");
 effect(() => {
   const vnode1: Vnode = {
     tag: "div",
-    key: 1,
     children: [
-      { tag: "div", key: 1, children: "123" },
-      { tag: "div", key: 2, children: "123" },
-      { tag: "div", key: 3, children: "123" },
-      { tag: "div", key: 4, children: "123" },
-      { tag: "div", key: 5, children: "123" },
-      { tag: "div", key: 6, children: "123" },
-      { tag: "div", key: 7, children: "123" },
+      { tag: "div", key: "1", children: "旧1" },
+      { tag: "div", key: "2", children: "旧2" },
+      { tag: "div", key: "3", children: "旧3" },
+      { tag: "div", key: "4", children: "旧4" },
+      { tag: "div", key: "5", children: "旧5" },
+      { tag: "div", key: "6", children: "旧5" },
+      { tag: "div", key: "7", children: "旧5" },
+      { tag: "div", key: "8", children: "旧5" },
     ],
   };
   const vnode2: Vnode = {
     tag: "div",
-    key: 1,
     children: [
-      { tag: "div", key: 1, children: "12" },
-      { tag: "div", key: 2, children: "12" },
-      { tag: "div", key: 3, children: "13" },
-      { tag: "div", key: 4, children: "13" },
+      { tag: "div", key: "1", children: "1" },
+      { tag: "div", key: "2", children: "3" },
+      { tag: "div", key: "3", children: "4" },
+      { tag: "div", key: "10", children: "4" },
+      { tag: "div", key: "9", children: "4" },
     ],
   };
   createApp(vnode1).mount(app);
